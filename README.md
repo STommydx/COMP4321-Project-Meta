@@ -2,7 +2,7 @@
 
 [![Java CI with Gradle](https://github.com/STommydx/COMP4321-Project-Phase1/actions/workflows/gradle.yml/badge.svg)](https://github.com/STommydx/COMP4321-Project-Phase1/actions/workflows/gradle.yml)
 
-The project is the course project for the HKUST COMP 4321 course. It is a wbe search engine based on vector space modeland powered by RocksDB.
+The project is the course project for the HKUST COMP 4321 course. It is a web search engine based on vector space model and powered by RocksDB.
 
 There are 2 directories under this folder, they are `COMP4321-Project` hosting backend logics with `jsp` and tomcat server to serve the backend API calls, and `comp4321-proj-ui` contains the frontend web user interface written in React.js.
 
