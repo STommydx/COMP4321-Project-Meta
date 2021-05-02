@@ -6,9 +6,15 @@ The project is the course project for the HKUST COMP 4321 course. It is a web se
 
 ![Screenshot](screenshot.png)
 
-There are 2 directories under this folder, they are `comp4321-proj` hosting backend logics with `jsp` and tomcat server to serve the backend API calls, and `comp4321-proj-ui` contains the frontend web user interface written in React.js.
-
 ## Repository Structure
+
+The repository is separated to 2 sub-repositories. They are `comp4321-proj` hosting backend logics with `jsp` and tomcat server to serve the backend API calls, and `comp4321-proj-ui` contains the frontend web user interface written in React.js.
+
+You may clone the whole repository with a recursive git clone.
+
+```bash=
+git clone --recursive git@github.com:STommydx/COMP4321-Project-Meta.git
+```
 
 There are 2 directories under this current directory. Please respect the repository structure and do not separate/rename the directories.
 
