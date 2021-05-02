@@ -4,13 +4,13 @@
 
 The project is the course project for the HKUST COMP 4321 course. It is a web search engine based on vector space model and powered by RocksDB.
 
-There are 2 directories under this folder, they are `COMP4321-Project` hosting backend logics with `jsp` and tomcat server to serve the backend API calls, and `comp4321-proj-ui` contains the frontend web user interface written in React.js.
+There are 2 directories under this folder, they are `comp4321-proj` hosting backend logics with `jsp` and tomcat server to serve the backend API calls, and `comp4321-proj-ui` contains the frontend web user interface written in React.js.
 
 ## Repository Structure
 
 There are 2 directories under this current directory. Please respect the repository structure and do not separate/rename the directories.
 
-For the backend directory `COMP4321-Project`, below shows the important files/directories of it.
+For the backend directory `comp4321-proj`, below shows the important files/directories of it.
 
 ```
 ├── build                                      (Build Folder)
@@ -169,7 +169,7 @@ For more information, please refer to the [installation guide](https://docs.dock
 
 #### Starting the stack
 
-It is recommended to use docker compose for starting up the whole search engine stack instead of installing it separately. It is done in the backend directory `COMP4321-Project` where `docker-compose.yml` resides.
+It is recommended to use docker compose for starting up the whole search engine stack instead of installing it separately. It is done in the backend directory `comp4321-proj` where `docker-compose.yml` resides.
 
 By default, it assumes the RocksDB is stored in `$PWD/db`. You may want to change the mount path or use docker volume instead by modifying `docker-compose.yml`.
 
@@ -241,11 +241,11 @@ To serve the UI website, you will need a static web server to serve the files. M
 
 #### Building the Backend
 
-The commands and relative paths listed in this section `Building the Backend` are executed in/relative to directory `COMP4321-Project/`. Please change directory into the directory `COMP4321-Project/` to execute the commands.
+The commands and relative paths listed in this section `Building the Backend` are executed in/relative to directory `comp4321-proj/`. Please change directory into the directory `comp4321-proj/` to execute the commands.
 
 ##### Dependency Management
 
-Dependency in backend directory `COMP4321-Project` is handled by Gradle.
+Dependency in backend directory `comp4321-proj` is handled by Gradle.
 
 ##### Building the CLI for backend
 
@@ -319,7 +319,7 @@ server {
 #### Deploying the Backend Search Engine
 
 The commands and relative paths listed in this section `Deploying the Backend Search Engine`
-are executed in/relative to directory `COMP4321-Project/`. Please change directory into the directory `COMP4321-Project/` to execute the commands.
+are executed in/relative to directory `comp4321-proj/`. Please change directory into the directory `comp4321-proj/` to execute the commands.
 
 The search engine web application is packaged in a single WAR file. There are several possible ways to deploy it.
 
