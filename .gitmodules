@@ -1,6 +1,6 @@
 [submodule "comp4321-proj"]
 	path = comp4321-proj
-	url = git@github.com:STommydx/COMP4321-Project.git
+	url = https://github.com/STommydx/COMP4321-Project.git
 [submodule "comp4321-proj-ui"]
 	path = comp4321-proj-ui
-	url = git@github.com:STommydx/COMP4321-Project-UI.git
+	url = https://github.com/STommydx/COMP4321-Project-UI.git
