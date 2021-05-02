@@ -72,32 +72,54 @@ There are several setups for deploying the search engine stack. Choose the one t
 
 The setup is preferable if you have Docker installed in your machine. You may deploy the full search engine stack only with a few commands. 
 
+#### Pre-requisite
+
+##### Java
+
+Crawling needs to be done before launching the container. Therefore, it is necessary for the host to have JDK installed. JDK 8 is recommended because the project is developed with Java 8.
+
+Please make sure the java binary directory is in `$PATH` and `$JAVA_HOME` is set to the Java installation
+directory, e.g. `/usr/bin/java`.
+
 #### Docker Installation
 
 Please refer to the Docker website for installation of Docker in different distributions.
 
 Installing Docker in CentOS:
 
-1. Set up repository
+1. Uninstall old versions of docker
+
+```bash=
+sudo yum remove docker \
+          docker-client \
+          docker-client-latest \
+          docker-common \
+          docker-latest \
+          docker-latest-logrotate \
+          docker-logrotate \
+          docker-engine
+```
+
+2. Set up repository
 
 ```bash=
 sudo yum install yum-utils
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 ```
 
-2. Install docker engine
+3. Install docker engine
 
 ```bash=
 sudo yum install docker-ce docker-ce-cli containerd.io
 ```
 
-3. Start Docker
-4. 
+4. Start Docker
+
 ```bash=
 sudo systemctl start docker
 ```
 
-4. Verify that docker is installed correctly by running the `hello-world` image
+5. Verify that docker is installed correctly by running the `hello-world` image
 
 ```bash=
 sudo docker run hello-world
@@ -111,19 +133,33 @@ Please refer to the Docker website for installation of Docker Compose in differe
 
 Installing docker compose in CentOS:
 
-1. Curl a stable release of docker compose
+1. Ensure required dependency packages are installed
+
+```bash=
+sudo yum install py-pip \
+                python3-dev \
+                libffi-dev \
+                openssl-dev \
+                gcc \
+                libc-dev \
+                rust \
+                cargo \
+                make
+```
+
+2. Curl a stable release of docker compose
 
 ```bash=
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
 
-2. Add executable permission
+3. Add executable permission
 
 ```bash=
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-3. Create symbolic link
+4. Create symbolic link
 
 ```bash=
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
@@ -136,6 +172,9 @@ For more information, please refer to the [installation guide](https://docs.dock
 It is recommended to use docker compose for starting up the whole search engine stack instead of installing it separately. It is done in the backend directory `COMP4321-Project` where `docker-compose.yml` resides.
 
 By default, it assumes the RocksDB is stored in `$PWD/db`. You may want to change the mount path or use docker volume instead by modifying `docker-compose.yml`.
+
+It is required for the web to be crawled for at least once. Please refer to [Crawling and Pre-requisites](#crawling-and-pre-requisites) section below.
+
 
 ```bash=
 docker-compose build
