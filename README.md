@@ -4,6 +4,8 @@
 
 The project is the course project for the HKUST COMP 4321 course. It is a web search engine based on vector space model and powered by RocksDB.
 
+![Screenshot](screenshot.png)
+
 There are 2 directories under this folder, they are `comp4321-proj` hosting backend logics with `jsp` and tomcat server to serve the backend API calls, and `comp4321-proj-ui` contains the frontend web user interface written in React.js.
 
 ## Repository Structure
