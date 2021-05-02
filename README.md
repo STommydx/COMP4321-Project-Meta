@@ -13,7 +13,7 @@ The repository is separated to 2 sub-repositories. They are `comp4321-proj` host
 You may clone the whole repository with a recursive git clone.
 
 ```bash=
-git clone --recursive git@github.com:STommydx/COMP4321-Project-Meta.git
+git clone --recursive https://github.com/STommydx/COMP4321-Project-Meta.git
 ```
 
 There are 2 directories under this current directory. Please respect the repository structure and do not separate/rename the directories.
