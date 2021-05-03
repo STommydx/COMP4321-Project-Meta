@@ -6,6 +6,8 @@ The project is the course project for the HKUST COMP 4321 course. It is a web se
 
 ![Screenshot](screenshot.png)
 
+A video demo can be found at https://www.youtube.com/watch?v=mjxxL2PuKzs.
+
 ## Repository Structure
 
 The repository is separated to 2 sub-repositories. They are `comp4321-proj` hosting backend logics with `jsp` and tomcat server to serve the backend API calls, and `comp4321-proj-ui` contains the frontend web user interface written in React.js.
